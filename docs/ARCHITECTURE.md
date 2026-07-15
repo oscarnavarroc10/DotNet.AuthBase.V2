@@ -40,4 +40,4 @@ These principles are recommendations from the Architect persona. They become bin
 
 ## Architecture Decision Records
 
-All significant decisions are recorded in [`docs/adr/`](docs/adr/README.md).
+All significant decisions are recorded in [`docs/adr/`](adr/README.md).
