@@ -34,7 +34,7 @@ AI agents operate under defined personas. See `.ai/personas/` for full details o
 1. Draft specification              →  specs/
 2. Review specification              →  Product Owner + Architect personas recommend an outcome
 3. Human approves specification      →  status set to Approved by a human maintainer
-4. Record decisions                  →  docs/decisions/ (ADR recommended by Architect, accepted by a human maintainer)
+4. Record decisions                  →  docs/adr/ (ADR recommended by Architect, accepted by a human maintainer)
 5. Implement                         →  Backend Engineer persona (only after Approved status + Accepted ADRs)
 6. Review code                       →  Code Reviewer + Security Reviewer personas recommend an outcome
 7. Human merges                      →  a human reviewer performs the merge

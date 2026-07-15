@@ -34,7 +34,7 @@ The Open Web Application Security Project, a nonprofit that publishes widely use
 A development methodology in which a written, approved specification is a prerequisite for any implementation work. Specifications are the source of truth for product behavior.
 
 **Architecture Decision Record (ADR)**
-A short document that captures a significant architectural decision, its context, and its consequences. Stored in `docs/decisions/`.
+A short document that captures a significant architectural decision, its context, and its consequences. Stored in `docs/adr/`.
 
 **Specification**
 A document in `specs/` that describes the expected behavior, requirements, and acceptance criteria for a feature. Must be approved before implementation begins.

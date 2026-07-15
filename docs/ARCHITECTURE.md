@@ -4,7 +4,7 @@
 
 ## Overview
 
-This document describes a **proposed** high-level architecture for DotNet.AuthBase.V2. Nothing here is final. Every structural choice, layer boundary, or flow described below is a candidate for discussion and must be recorded as an Architecture Decision Record (ADR) in `docs/decisions/` — and reach `Accepted` status — before implementation begins.
+This document describes a **proposed** high-level architecture for DotNet.AuthBase.V2. Nothing here is final. Every structural choice, layer boundary, or flow described below is a candidate for discussion and must be recorded as an Architecture Decision Record (ADR) in `docs/adr/` — and reach `Accepted` status — before implementation begins.
 
 ## Proposed Component Structure
 
@@ -40,4 +40,4 @@ These principles are recommendations from the Architect persona. They become bin
 
 ## Architecture Decision Records
 
-All significant decisions are recorded in [`docs/decisions/`](decisions/README.md).
+All significant decisions are recorded in [`docs/adr/`](docs/adr/README.md).
