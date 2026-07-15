@@ -8,14 +8,12 @@ Specifications are the **source of truth** for product behavior. No production c
 
 ## Structure
 
-Each specification lives in its own subdirectory and follows a consistent format:
+Each specification lives in its own subdirectory and is defined in a single specification document:
 
-```
+```text
 specs/
 └── <feature-name>/
-    ├── README.md        # Specification summary and status
-    ├── requirements.md  # Functional and non-functional requirements
-    └── acceptance.md    # Acceptance criteria and test scenarios
+    └── spec.md
 ```
 
 ## Specification Status
@@ -38,4 +36,6 @@ specs/
 
 ## Index
 
-> No specifications have been written yet. This directory will be populated as features are defined.
+| ID | Title | Status |
+|----|-------|--------|
+| SPEC-0001 | Authentication Foundation | In Review |

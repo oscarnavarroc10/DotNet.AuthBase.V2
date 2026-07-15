@@ -1,6 +1,6 @@
 # SPEC-0001: Authentication Foundation
 
-- **Status:** Proposed
+- **Status:** In Review
 - **Related ADR:** ADR-0001 Base Architecture
 
 ---
@@ -11,7 +11,7 @@ This specification defines the minimum authentication capabilities provided by D
 
 The goal is to provide a secure, reusable authentication foundation for ASP.NET Core applications using JWT-based authentication.
 
-This specification focuses on authentication and session management only.
+This specification focuses on authentication, session management, and basic role-based authorization.
 
 ---
 
@@ -29,7 +29,7 @@ The system shall provide:
 - Current authenticated user
 - User roles
 - Role-based authorization
-- Password hashing
+- Secure credential management
 - User enable/disable
 
 ---
@@ -38,8 +38,11 @@ The system shall provide:
 
 ## Registration
 
-- The system shall support public registration when enabled.
-- The system shall allow administrator-only registration when public registration is disabled.
+- Public registration shall be disabled by default.
+- When public registration is enabled, the system shall allow users to register using an email and password.
+- When public registration is disabled, users may only be created through an authorized administrative operation.
+- Public registration shall assign only a server-controlled default role.
+- Clients shall not be allowed to select or assign roles during registration.
 
 ---
 
@@ -55,23 +58,42 @@ The system shall:
 
 ---
 
+## Credential Security
+
+The system shall:
+
+- Never store or log passwords in plaintext.
+- Protect passwords using an adaptive salted password-hashing mechanism.
+- Never expose passwords, password hashes, or credential material in responses.
+
+---
+
 ## Session Management
 
 The system shall:
 
-- Refresh expired access tokens using a valid refresh token.
-- Rotate refresh tokens.
-- Revoke refresh tokens.
-- Allow logout.
+- Refresh an authenticated session using a valid refresh token.
+- Issue refresh tokens with a finite expiration.
+- Treat refresh tokens as single-use credentials.
+- Rotate the refresh token whenever a session is refreshed.
+- Invalidate the previous refresh token when rotation succeeds.
+- Reject expired, revoked, reused, or otherwise invalid refresh tokens.
+- Revoke the current refresh-token session on logout.
+- Allow authorized administrators to revoke all active sessions for a user.
+- Reject session refresh attempts from disabled users.
 
 ---
 
 ## User Information
 
-The system shall expose:
+The system shall expose the current authenticated user's:
 
-- Current authenticated user.
+- User identifier.
+- Email.
 - Assigned roles.
+- Enabled or disabled status.
+
+The system shall not expose passwords, password hashes, tokens, token metadata, or other credential material.
 
 ---
 
@@ -81,6 +103,10 @@ The system shall support:
 
 - Role-based authorization.
 - Multiple roles per user.
+- Server-controlled role assignment.
+- Role changes performed only through authorized administrative operations.
+- Access being granted when the authenticated user has a required role.
+- Access being denied when the authenticated user does not have a required role.
 
 ---
 
@@ -89,7 +115,7 @@ The system shall support:
 The authentication system shall be:
 
 - Secure by default.
-- Stateless.
+- Access token validation shall not require a database lookup.
 - Testable.
 - Extensible.
 - Framework-independent where possible.
@@ -115,6 +141,26 @@ The following features are intentionally excluded from this specification:
 
 # Acceptance Criteria
 
+## Registration Enabled
+
+Given public registration is enabled
+
+When a new user registers with valid information
+
+Then the account is created with the default server-assigned role.
+
+---
+
+## Registration Disabled
+
+Given public registration is disabled
+
+When an anonymous user attempts to register
+
+Then the request is rejected.
+
+---
+
 ## Login
 
 Given valid credentials
@@ -125,20 +171,70 @@ Then the system returns a valid Access Token and Refresh Token.
 
 ---
 
+## Invalid Login
+
+Given invalid credentials
+
+When the user authenticates
+
+Then authentication is rejected.
+
+---
+
+## Disabled User
+
+Given a disabled user
+
+When authentication is attempted
+
+Then authentication is rejected.
+
+---
+
 ## Refresh
 
 Given a valid Refresh Token
 
-When the Access Token expires
+When the client requests a session refresh
 
-Then the system issues a new Access Token.
+Then the system returns a new Access Token and a new Refresh Token.
 
 ---
 
-## Authorization
+## Logout
+
+Given an authenticated session
+
+When the user logs out
+
+Then the current refresh-token session is revoked.
+
+---
+
+## Current User
 
 Given an authenticated user
 
+When requesting the current user
+
+Then the response contains only the allowed user information and no credential material.
+
+---
+
+## Authorization - Allowed
+
+Given an authenticated user with the required role
+
 When accessing a protected endpoint
 
-Then authorization is evaluated using assigned roles.
+Then access is granted.
+
+---
+
+## Authorization - Denied
+
+Given an authenticated user without the required role
+
+When accessing a protected endpoint
+
+Then access is denied.
