@@ -20,7 +20,7 @@ src/
 Before any source code is added to this directory:
 
 1. All relevant feature specifications in `specs/` must be in `Approved` status.
-2. Architecture decisions must be recorded in `docs/decisions/`.
+2. Architecture decisions must be recorded in `docs/adr/`.
 3. The technology stack must be confirmed in `docs/TECH_STACK.md`.
 
 ## Getting Started (Future)

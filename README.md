@@ -20,7 +20,7 @@ DotNet.AuthBase.V2/
 │   ├── ARCHITECTURE.md     # Architecture decisions and diagrams
 │   ├── TECH_STACK.md       # Technology choices and rationale
 │   ├── AI_RULES.md         # Rules governing AI agent behavior
-│   └── decisions/          # Architecture Decision Records (ADRs)
+│   └── adr/          # Architecture Decision Records (ADRs)
 ├── specs/                  # Feature specifications (source of truth)
 ├── src/                    # Application source code (not yet implemented)
 ├── tests/                  # Automated tests (not yet implemented)
@@ -36,7 +36,7 @@ This project follows SDD principles:
 
 1. **Specifications first** — Every feature begins with a written specification in `specs/`.
 2. **Review before code** — Specifications must be approved before implementation starts.
-3. **Decisions documented** — Architecture decisions are recorded in `docs/decisions/`.
+3. **Decisions documented** — Architecture decisions are recorded in `docs/adr/`.
 4. **AI-assisted, human-approved** — AI agents assist with drafting, but humans approve all specs and architectural decisions.
 
 ## Getting Started

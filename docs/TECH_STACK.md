@@ -1,6 +1,6 @@
 # Technology Stack
 
-> **Status:** Placeholder — Nothing in this document is a final decision. Every row below is a **candidate** under consideration. No technology choice takes effect until it is recorded as `Accepted` in an Architecture Decision Record (ADR) under [`docs/decisions/`](decisions/README.md).
+> **Status:** Placeholder — Nothing in this document is a final decision. Every row below is a **candidate** under consideration. No technology choice takes effect until it is recorded as `Accepted` in an Architecture Decision Record (ADR) under [`docs/adr/`](adr/README.md).
 
 ## How to Read This Document
 
@@ -49,4 +49,4 @@
 | dotnet CLI | Build, test, run | Pending ADR |
 | EditorConfig | Code style enforcement | Pending ADR |
 
-> All entries in this document are proposals only. The Architect persona may recommend a candidate, but only a human maintainer can accept an ADR and make a technology choice final. See [`docs/decisions/README.md`](decisions/README.md) for the ADR process.
+> All entries in this document are proposals only. The Architect persona may recommend a candidate, but only a human maintainer can accept an ADR and make a technology choice final. See [`docs/adr/README.md`](adr/README.md) for the ADR process.

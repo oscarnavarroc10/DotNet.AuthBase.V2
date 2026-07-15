@@ -8,11 +8,11 @@ This file defines the non-negotiable rules for all contributors and AI agents wo
 
 1. **Specifications first.** Every feature must have an approved specification in `specs/` before implementation begins. There are no exceptions.
 
-2. **No assumption allowed.** If a requirement is ambiguous, unclear, or missing, stop work and ask a clarifying question. Do not invent or assume missing details, and do not generate production code while the ambiguity is unresolved.
+2. **No assumption allowed.** When information is intentionally deferred to a future ADR, Specification, or Plan, do not treat the absence of those details as an error.
 
 3. **No unapproved scope.** Implement exactly what the specification describes. Do not add, remove, or modify behavior that is not explicitly specified.
 
-4. **Decisions before code.** All significant architectural decisions must be recorded as ADRs in `docs/decisions/` and reach `Accepted` status before related code is written.
+4. **Decisions before code.** All significant architectural decisions must be recorded as ADRs in `docs/adr/` and reach `Accepted` status before related code is written.
 
 5. **Traceability required.** Every code change must reference the specification or ADR that justifies it.
 
@@ -39,3 +39,33 @@ This file defines the non-negotiable rules for all contributors and AI agents wo
 13. **Keep documentation current.** When implementation diverges from documented behavior, update the documentation in the same pull request.
 
 14. **ADRs are permanent.** Do not delete ADRs. If a decision is reversed, mark the original ADR as `Superseded` and create a new one.
+
+## Pull Request Review Rules
+
+15. During pull request reviews, prioritize contradictions, ambiguities, and violations of existing ADRs or Specifications.
+
+16. Review ADRs as architectural decision records, not implementation documents. Focus on decision quality, consistency, consequences, and trade-offs. Do not request implementation details unless they contradict an accepted ADR.
+
+17. Do not request implementation details, algorithms, frameworks, or libraries in Specifications. Those belong in ADRs or implementation Plans.
+
+18. When implementation details are intentionally deferred, recommend creating or updating an ADR or Plan instead of expanding the current document.
+
+19. Do not suggest splitting documents unless the repository convention explicitly requires it.
+
+20. Prefer identifying inconsistencies over requesting additional detail.
+
+21. During reviews, evaluate each document according to its responsibility. Do not request information that belongs in another document type. Missing details that are explicitly deferred to future ADRs, Specifications, or Plans must not be treated as defects.
+
+## Review Philosophy
+
+This repository follows Spec-Driven Development (SDD).
+
+Each document has a specific responsibility:
+
+- Vision defines project goals.
+- ADRs define architectural decisions.
+- Specifications define product behavior.
+- Plans define implementation strategy.
+- Tasks define implementation work.
+
+During reviews, evaluate each document according to its responsibility. Do not request information that belongs in another document type.
