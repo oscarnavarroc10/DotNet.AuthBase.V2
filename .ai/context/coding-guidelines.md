@@ -8,10 +8,12 @@ This file defines the coding standards for DotNet.AuthBase.V2 C# code. All AI ag
 
 ## Language and Framework
 
-- Use **C# 12** and **.NET 8** features where appropriate.
-- Use **ASP.NET Core 8** for HTTP concerns.
-- Use **Entity Framework Core 8** for data access.
-- Target the latest stable LTS version of .NET.
+> The specific runtime, framework, and language versions are candidates tracked in [`docs/TECH_STACK.md`](../../docs/TECH_STACK.md) and are not final until accepted via an ADR. The guidance below applies once those candidates are accepted, and should be revisited if the accepted ADR differs.
+
+- Use the .NET LTS runtime and C# language version accepted in the corresponding ADR.
+- Use ASP.NET Core for HTTP concerns, as proposed in `docs/TECH_STACK.md`.
+- Use Entity Framework Core for data access, as proposed in `docs/TECH_STACK.md`.
+- Target the latest stable LTS version of .NET once confirmed by ADR.
 
 ## Naming Conventions
 
@@ -67,7 +69,9 @@ public string GenerateAccessToken(Guid userId) { ... }
 
 ## Testing
 
-- Use **xUnit** for all tests.
-- Use **Moq** for mocking.
+> Test framework and mocking library are candidates tracked in [`docs/TECH_STACK.md`](../../docs/TECH_STACK.md), pending ADR acceptance.
+
+- Use **xUnit** for all tests (candidate, see `docs/TECH_STACK.md`).
+- Use **Moq** for mocking (candidate, see `docs/TECH_STACK.md`).
 - Name tests using the pattern: `MethodName_Scenario_ExpectedOutcome`.
 - Each test method should test one behavior.

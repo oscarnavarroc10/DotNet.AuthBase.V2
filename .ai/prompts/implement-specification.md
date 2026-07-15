@@ -32,18 +32,20 @@ Implement the feature described in the approved specification below. Follow the 
 
 ## Output Expected
 
-Produce the following:
+If the approved specification is ambiguous, incomplete, or contradictory in any way relevant to this implementation, **stop immediately**. Do not generate production code. Instead, list the specific clarifying questions that must be answered (use the format in `.ai/prompts/clarify-requirements.md`) and wait for a human response before proceeding.
+
+If the specification is sufficiently clear, produce the following:
 
 1. **Implementation plan** — A brief description of the components to create or modify, before writing any code.
 2. **Code** — C# source files that implement the specification. Each file must:
    - Include XML documentation on all public members.
    - Follow the naming conventions in `.ai/context/coding-guidelines.md`.
    - Not include hardcoded secrets, credentials, or environment-specific values.
-3. **Open questions** — If any part of the specification is ambiguous, list the questions instead of making assumptions.
+3. **Open questions** — If any smaller part of the specification is ambiguous but does not block the overall implementation, list the questions instead of making assumptions.
 
 ## Rules
 
 - Do not implement any behavior not described in the specification.
 - Do not extend scope beyond the approved specification.
-- If the specification is ambiguous, use the clarify-requirements prompt first.
+- If any part of the specification is ambiguous, stop and use the clarify-requirements prompt before writing any code. Never guess or fill gaps with assumptions.
 - Do not generate code until the specification status is `Approved`.

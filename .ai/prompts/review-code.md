@@ -55,13 +55,16 @@ Provide a structured review with the following sections:
 ### Security
 - Are there any security concerns that require the Security Reviewer's attention?
 
-### Verdict
-- `Approved` — Ready to merge.
-- `Approved with Minor Comments` — May merge after addressing minor issues.
-- `Changes Requested` — List blocking issues that must be resolved.
+### Recommendation
+
+State a recommendation for the human reviewer, who retains final merge authority:
+
+- `Recommend Approval` — Appears ready to merge.
+- `Recommend Approval with Minor Comments` — May be merged after addressing minor issues, at the human reviewer's discretion.
+- `Recommend Changes` — List blocking issues that must be resolved before it can be considered ready.
 
 ## Rules
 
-- Do not approve code that does not trace back to an approved specification.
-- Do not approve code with known bugs or unhandled failure scenarios.
+- Do not present a recommendation as if it were a merge decision; only a human reviewer may approve and merge.
+- Do not recommend approval for code with known bugs or unhandled failure scenarios.
 - Flag any security concerns for the Security Reviewer.

@@ -51,13 +51,16 @@ Provide a structured review with the following sections:
 - Is this decision easily reversible?
 - What is the cost of reversal if needed in the future?
 
-### Verdict
-- `Accepted` — The decision is sound and may be recorded.
-- `Needs Revision` — List required changes before the ADR can be accepted.
-- `Rejected` — Explain why this approach should not be adopted.
+### Recommendation
+
+State a recommendation for the human maintainer, who retains final decision-making authority:
+
+- `Recommend Accepted` — The decision appears sound and may be presented to a human maintainer for final acceptance.
+- `Needs Revision` — List required changes before the ADR can be recommended for acceptance.
+- `Recommend Rejected` — Explain why this approach should not be adopted.
 
 ## Rules
 
-- Do not approve decisions that create unresolvable conflicts with existing ADRs.
-- Always document trade-offs, even for decisions that are clearly correct.
-- If implementation must begin before a final decision is made, record a `Proposed` ADR and flag the risk.
+- Do not present a recommendation as if it were a final decision; only a human maintainer may set an ADR's status to `Accepted`.
+- Always document trade-offs, even for decisions that appear clearly correct.
+- If implementation must begin before a final decision is made, recommend recording a `Proposed` ADR and flag the risk to a human maintainer.

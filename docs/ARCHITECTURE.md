@@ -4,9 +4,11 @@
 
 ## Overview
 
-This document describes the planned high-level architecture for DotNet.AuthBase.V2. All architectural decisions must be recorded as Architecture Decision Records (ADRs) in `docs/decisions/` before implementation begins.
+This document describes a **proposed** high-level architecture for DotNet.AuthBase.V2. Nothing here is final. Every structural choice, layer boundary, or flow described below is a candidate for discussion and must be recorded as an Architecture Decision Record (ADR) in `docs/decisions/` — and reach `Accepted` status — before implementation begins.
 
-## Planned Component Structure
+## Proposed Component Structure
+
+> The layout below is a starting proposal, not a finalized design. It will be superseded by whatever structure the corresponding ADR(s) accept.
 
 ```
 DotNet.AuthBase.V2 (ASP.NET Core solution)
@@ -16,16 +18,18 @@ DotNet.AuthBase.V2 (ASP.NET Core solution)
 └── DotNet.AuthBase.Tests          # Unit and integration tests
 ```
 
-## Guiding Principles
+## Guiding Principles (Proposed)
 
-- **Separation of Concerns** — Business logic, infrastructure, and API layers are kept independent.
-- **Security by Default** — All authentication flows follow OWASP best practices.
-- **Testability** — All components are designed for unit and integration testing.
+- **Separation of Concerns** — Business logic, infrastructure, and API layers should remain independent.
+- **Security by Default** — Authentication flows should follow OWASP best practices.
+- **Testability** — Components should be designed for unit and integration testing.
 - **Spec-Driven** — No component is implemented without an approved specification.
 
-## Authentication Flow (Planned)
+These principles are recommendations from the Architect persona. They become binding only once captured in an `Accepted` ADR.
 
-> The following is a preliminary outline. Each flow will be fully specified in `specs/` before implementation.
+## Authentication Flow (Proposed Outline)
+
+> The following is a preliminary, non-binding outline. Each flow will be fully specified in `specs/` and its architectural implications recorded in an ADR before implementation.
 
 1. User submits credentials.
 2. Credentials are validated against a secure store.
