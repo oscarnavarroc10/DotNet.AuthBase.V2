@@ -1,0 +1,6 @@
+@DotNet.AuthBase.V2.Api_HostAddress = http://localhost:5033
+
+GET {{DotNet.AuthBase.V2.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

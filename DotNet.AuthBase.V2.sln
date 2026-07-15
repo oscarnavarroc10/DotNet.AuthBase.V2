@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Domain", "src\DotNet.AuthBase.V2.Domain\DotNet.AuthBase.V2.Domain.csproj", "{73CE9CB7-F604-4FCB-AFBB-8D2005A19C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Application", "src\DotNet.AuthBase.V2.Application\DotNet.AuthBase.V2.Application.csproj", "{C8DDC5A0-28E8-4493-82B2-634F100FB0F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Infrastructure", "src\DotNet.AuthBase.V2.Infrastructure\DotNet.AuthBase.V2.Infrastructure.csproj", "{695F9BDF-573A-4EF3-A71C-D1E5640AC647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Api", "src\DotNet.AuthBase.V2.Api\DotNet.AuthBase.V2.Api.csproj", "{53AD02BE-B3D9-40EA-80E7-779DBE7A45A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Domain.Tests", "tests\DotNet.AuthBase.V2.Domain.Tests\DotNet.AuthBase.V2.Domain.Tests.csproj", "{D76BD7EF-BCDD-4168-AF15-20FF89EBE049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.Application.Tests", "tests\DotNet.AuthBase.V2.Application.Tests\DotNet.AuthBase.V2.Application.Tests.csproj", "{AD1D7EEC-E05C-4AB2-9D19-9F52FFE42709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.AuthBase.V2.IntegrationTests", "tests\DotNet.AuthBase.V2.IntegrationTests\DotNet.AuthBase.V2.IntegrationTests.csproj", "{169D04BC-960D-49B2-A8A0-D6E792205AFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73CE9CB7-F604-4FCB-AFBB-8D2005A19C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CE9CB7-F604-4FCB-AFBB-8D2005A19C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73CE9CB7-F604-4FCB-AFBB-8D2005A19C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73CE9CB7-F604-4FCB-AFBB-8D2005A19C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8DDC5A0-28E8-4493-82B2-634F100FB0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DDC5A0-28E8-4493-82B2-634F100FB0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DDC5A0-28E8-4493-82B2-634F100FB0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DDC5A0-28E8-4493-82B2-634F100FB0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{695F9BDF-573A-4EF3-A71C-D1E5640AC647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695F9BDF-573A-4EF3-A71C-D1E5640AC647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695F9BDF-573A-4EF3-A71C-D1E5640AC647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695F9BDF-573A-4EF3-A71C-D1E5640AC647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53AD02BE-B3D9-40EA-80E7-779DBE7A45A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AD02BE-B3D9-40EA-80E7-779DBE7A45A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AD02BE-B3D9-40EA-80E7-779DBE7A45A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AD02BE-B3D9-40EA-80E7-779DBE7A45A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76BD7EF-BCDD-4168-AF15-20FF89EBE049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76BD7EF-BCDD-4168-AF15-20FF89EBE049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76BD7EF-BCDD-4168-AF15-20FF89EBE049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76BD7EF-BCDD-4168-AF15-20FF89EBE049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1D7EEC-E05C-4AB2-9D19-9F52FFE42709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1D7EEC-E05C-4AB2-9D19-9F52FFE42709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1D7EEC-E05C-4AB2-9D19-9F52FFE42709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1D7EEC-E05C-4AB2-9D19-9F52FFE42709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169D04BC-960D-49B2-A8A0-D6E792205AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169D04BC-960D-49B2-A8A0-D6E792205AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169D04BC-960D-49B2-A8A0-D6E792205AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169D04BC-960D-49B2-A8A0-D6E792205AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

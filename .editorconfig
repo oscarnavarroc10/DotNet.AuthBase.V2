@@ -1,0 +1,40 @@
+# Top-most EditorConfig file
+root = true
+
+# Default rules for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown files may intentionally contain trailing spaces
+[*.md]
+trim_trailing_whitespace = false
+
+# C# project files
+[*.{cs,csx}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+
+# Prefer file-scoped namespaces
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Prefer braces for control-flow statements
+csharp_prefer_braces = true:suggestion
+
+# Prefer explicit accessibility modifiers
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion
+
+# Organize using directives
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = warning
+
+# XML, JSON, YAML and project files
+[*.{csproj,props,targets,xml,json,yml,yaml}]
+indent_style = space
+indent_size = 2
