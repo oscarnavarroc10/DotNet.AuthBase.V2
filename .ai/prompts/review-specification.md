@@ -42,13 +42,17 @@ Provide a structured review with the following sections:
 ### Security Concerns
 - Are there any security implications that the Security Reviewer should evaluate?
 
-### Verdict
-- `Approved` — Ready for implementation.
-- `Needs Changes` — List the required changes before approval.
-- `Rejected` — Explain why this specification should not be implemented.
+### Recommendation
+
+State a recommendation for the human maintainer, who retains final approval authority over specification status:
+
+- `Recommend Approval` — Appears ready for implementation.
+- `Needs Changes` — List the required changes before it can be recommended for approval.
+- `Recommend Rejection` — Explain why this specification should not be implemented.
 
 ## Rules
 
-- Do not approve a specification with unresolved ambiguities.
-- Do not approve a specification that conflicts with the product vision without documented justification.
+- Do not present a recommendation as if it were a final decision; only a human maintainer may set a specification's status to `Approved`.
+- Do not recommend approval of a specification with unresolved ambiguities.
+- Do not recommend approval of a specification that conflicts with the product vision without documented justification.
 - Flag any missing ADRs that must be created before implementation begins.

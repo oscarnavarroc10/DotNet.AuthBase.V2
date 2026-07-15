@@ -29,9 +29,9 @@ Example: `0001-use-jwt-for-authentication.md`
 
 1. Create a new ADR file in this directory following the naming convention.
 2. Set status to `Proposed`.
-3. Request review from the Architect persona (see `.ai/personas/architect.md`).
-4. Once approved, update the status to `Accepted`.
-5. No implementation may begin until the related ADR is `Accepted`.
+3. Request a recommendation from the Architect persona (see `.ai/personas/architect.md`). The persona may recommend acceptance, revision, or rejection, but cannot change the status itself.
+4. A human maintainer reviews the recommendation and, if in agreement, updates the status to `Accepted`.
+5. No implementation may begin until the related ADR is `Accepted` by a human maintainer.
 
 ## Index
 

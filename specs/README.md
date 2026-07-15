@@ -32,9 +32,9 @@ specs/
 
 1. Create a new subdirectory under `specs/` for the feature.
 2. Write a draft specification following the format above.
-3. Request review using the prompt in `.ai/prompts/review-specification.md`.
-4. Incorporate feedback and update the status to `Approved`.
-5. Implementation may begin only after approval.
+3. Request a recommendation using the prompt in `.ai/prompts/review-specification.md`. The AI reviewer may recommend approval, changes, or rejection, but cannot change the status itself.
+4. Incorporate feedback. A human maintainer reviews the recommendation and, if in agreement, updates the status to `Approved`.
+5. Implementation may begin only after a human maintainer sets the status to `Approved`.
 
 ## Index
 

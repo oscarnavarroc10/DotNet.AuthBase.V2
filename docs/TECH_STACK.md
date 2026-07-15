@@ -1,46 +1,52 @@
 # Technology Stack
 
-> **Status:** Placeholder — Technology choices are preliminary and will be finalized through Architecture Decision Records before implementation begins.
+> **Status:** Placeholder — Nothing in this document is a final decision. Every row below is a **candidate** under consideration. No technology choice takes effect until it is recorded as `Accepted` in an Architecture Decision Record (ADR) under [`docs/decisions/`](decisions/README.md).
+
+## How to Read This Document
+
+- **Candidate** — Being considered, not yet decided.
+- **Pending ADR** — No ADR exists yet for this concern.
+- References to a specific ADR number (e.g. `ADR-0003`) will be added here once that ADR reaches `Accepted` status.
 
 ## Runtime & Framework
 
-| Layer | Technology | Rationale |
-|-------|-----------|-----------|
-| Runtime | .NET 8 (LTS) | Long-term support, performance, cross-platform |
-| Web Framework | ASP.NET Core 8 | Industry-standard for .NET APIs |
-| Language | C# 12 | Latest stable language features |
+| Layer | Candidate | ADR Reference |
+|-------|-----------|----------------|
+| Runtime | .NET (LTS release) | Pending ADR |
+| Web Framework | ASP.NET Core | Pending ADR |
+| Language | C# (latest LTS-compatible version) | Pending ADR |
 
 ## Authentication & Security
 
-| Concern | Technology | Rationale |
-|---------|-----------|-----------|
-| Token Format | JSON Web Tokens (JWT) | Stateless, widely supported |
-| Token Signing | HMAC-SHA256 / RS256 (TBD) | To be decided via ADR |
-| Password Hashing | BCrypt / ASP.NET Core Identity (TBD) | To be decided via ADR |
-| Refresh Tokens | Opaque tokens stored server-side | Security best practice |
+| Concern | Candidate(s) | ADR Reference |
+|---------|--------------|----------------|
+| Token Format | JSON Web Tokens (JWT) | Pending ADR |
+| Token Signing | HMAC-SHA256 or RS256 | Pending ADR |
+| Password Hashing | BCrypt or ASP.NET Core Identity | Pending ADR |
+| Refresh Tokens | Opaque, server-side stored tokens | Pending ADR |
 
 ## Data & Persistence
 
-| Concern | Technology | Rationale |
-|---------|-----------|-----------|
-| ORM | Entity Framework Core 8 | Native .NET ORM, migrations support |
-| Database | PostgreSQL (default) / SQL Server (optional) | To be decided via ADR |
-| Caching | Not yet determined | To be decided via ADR |
+| Concern | Candidate(s) | ADR Reference |
+|---------|--------------|----------------|
+| ORM | Entity Framework Core | Pending ADR |
+| Database | PostgreSQL or SQL Server | Pending ADR |
+| Caching | Not yet determined | Pending ADR |
 
 ## Testing
 
-| Concern | Technology | Rationale |
-|---------|-----------|-----------|
-| Unit Tests | xUnit | Standard .NET test framework |
-| Mocking | Moq | Widely used, mature library |
-| Integration Tests | WebApplicationFactory + Testcontainers (TBD) | In-process API testing |
+| Concern | Candidate(s) | ADR Reference |
+|---------|--------------|----------------|
+| Unit Tests | xUnit | Pending ADR |
+| Mocking | Moq | Pending ADR |
+| Integration Tests | WebApplicationFactory with Testcontainers | Pending ADR |
 
 ## Tooling
 
-| Tool | Purpose |
-|------|---------|
-| GitHub Actions | CI/CD pipelines |
-| dotnet CLI | Build, test, run |
-| EditorConfig | Code style enforcement |
+| Tool | Purpose | ADR Reference |
+|------|---------|----------------|
+| GitHub Actions | CI/CD pipelines | Pending ADR |
+| dotnet CLI | Build, test, run | Pending ADR |
+| EditorConfig | Code style enforcement | Pending ADR |
 
-> All technology choices are subject to change until formally recorded in an ADR.
+> All entries in this document are proposals only. The Architect persona may recommend a candidate, but only a human maintainer can accept an ADR and make a technology choice final. See [`docs/decisions/README.md`](decisions/README.md) for the ADR process.
