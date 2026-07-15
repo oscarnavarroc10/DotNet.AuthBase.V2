@@ -12,7 +12,7 @@ This file defines the non-negotiable rules for all contributors and AI agents wo
 
 3. **No unapproved scope.** Implement exactly what the specification describes. Do not add, remove, or modify behavior that is not explicitly specified.
 
-4. **Decisions before code.** All significant architectural decisions must be recorded as ADRs in docs/adr/ and reach `Accepted` status before related code is written.
+4. **Decisions before code.** All significant architectural decisions must be recorded as ADRs in `docs/adr/` and reach `Accepted` status before related code is written.
 
 5. **Traceability required.** Every code change must reference the specification or ADR that justifies it.
 
