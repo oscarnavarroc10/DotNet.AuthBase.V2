@@ -52,7 +52,8 @@ This plan does not include:
 ## Phase 1 — Solution Foundation
 
 - Create the solution structure.
-- Create the Core project.
+- Create the Domain project.
+- Create the Application project.
 - Create the Infrastructure project.
 - Create the Api project.
 - Configure dependency injection.
