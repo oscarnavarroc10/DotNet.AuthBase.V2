@@ -1,0 +1,22 @@
+# .NET build output
+bin/
+obj/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific IDE files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Test results and coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# macOS
+.DS_Store

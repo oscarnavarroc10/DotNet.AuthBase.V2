@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DotNet.AuthBase.V2.Application\DotNet.AuthBase.V2.Application.csproj" />
+      <ProjectReference Include="..\DotNet.AuthBase.V2.Domain\DotNet.AuthBase.V2.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
